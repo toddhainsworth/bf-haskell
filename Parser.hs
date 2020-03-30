@@ -3,14 +3,7 @@ module Parser where
 import Text.Parsec
 import Text.ParserCombinators.Parsec
 
-data BFToken = MoveLeft
-             | MoveRight
-             | Increment
-             | Decrement
-             | Output
-             | Input
-             | Loop [BFToken]
-             deriving Show
+import Token
 
 parseFromString :: String -> Either ParseError [BFToken]
 parseFromString = parse parseTokens "bf-haskell"
