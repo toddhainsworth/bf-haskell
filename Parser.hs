@@ -13,7 +13,7 @@ data BFToken = MoveLeft
              deriving Show
 
 parseFromString :: String -> Either ParseError [BFToken]
-parseFromString s = parse parseTokens "foo" s
+parseFromString = parse parseTokens "bf-haskell"
 
 parseTokens :: Parser [BFToken]
 parseTokens = many parseToken
